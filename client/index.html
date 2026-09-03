@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobConnect - Role-Based Job Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <!-- NAVIGATION BAR  -->
+  
+  <nav id="navbar" class="hidden">
+    <div class="nav-brand">JobConnect</div>
+    <div class="nav-info">
+      <span id="nav-username"></span>
+      <span id="nav-role" class="role-badge"></span>
+    </div>
+    <button id="logout-btn" class="btn btn-outline">Logout</button>
+  </nav>
+
+  
+  <!-- AUTH SECTION - Login ,Register -->
+
+  <section id="auth-section" class="section">
+    <div class="auth-container">
+      <div class="auth-header">
+        <h1>JobConnect</h1>
+        <p>Find your dream job or hire the best talent</p>
+      </div>
+
+      <!-- Tab Switcher: login register -->
+      <div class="auth-tabs">
+        <button class="tab-btn active" data-tab="login">Login</button>
+        <button class="tab-btn" data-tab="register">Register</button>
+      </div>
+
+      <!-- lOGIN fORM -->
+      <form id="login-form" class="auth-form">
+        <div class="form-group">
+          <label for="login-username">Username</label>
+          <input type="text" id="login-username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Login</button>
+        <p class="form-message" id="login-message"></p>
+      </form>
+
+      <!-- REGISTER FORM -->
+      
+      <!-- "Admin" -> Admin Dashboard | "Seeker" -> Seeker Dashboard -->
+      <form id="register-form" class="auth-form hidden">
+        <div class="form-group">
+          <label for="reg-username">Username</label>
+          <input type="text" id="reg-username" placeholder="Choose a username" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" placeholder="Choose a password" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-role">Select Role</label>
+          <select id="reg-role" required>
+            <option value="" disabled selected>-- Select your role --</option>
+            <option value="Admin">Admin / Recruiter</option>
+            <option value="Seeker">Job Seeker</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Register</button>
+        <p class="form-message" id="register-message"></p>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ADMIN DASHBOARD -->
+  <!-- Only visible when logged-in user's role is "Admin" -->
+
+  <section id="admin-dashboard" class="section hidden">
+    <div class="dashboard-container">
+
+      <aside class="dashboard-sidebar">
+        <h2>Admin Panel</h2>
+        <button class="sidebar-btn active" data-panel="create-job">Post a Job</button>
+        <button class="sidebar-btn" data-panel="view-applications">View Applications</button>
+      </aside>
+
+      
+      <main class="dashboard-main">
+
+        <!-- CREATE JOB PANEL -->
+        <div id="create-job" class="panel">
+          <h2>Post a New Job</h2>
+          <form id="create-job-form">
+            <div class="form-group">
+              <label for="job-title">Job Title</label>
+              <input type="text" id="job-title" placeholder="e.g. Frontend Developer" required>
+            </div>
+            <div class="form-group">
+              <label for="job-company">Company Name</label>
+              <input type="text" id="job-company" placeholder="e.g. Google" required>
+            </div>
+            <div class="form-group">
+              <label for="job-salary">Salary (LPA)</label>
+              <input type="text" id="job-salary" placeholder="e.g. 12 LPA" required>
+            </div>
+            <div class="form-group">
+              <label for="job-description">Job Description</label>
+              <textarea id="job-description" rows="4" placeholder="Describe the role, requirements, and responsibilities..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Post Job</button>
+            <p class="form-message" id="create-job-message"></p>
+          </form>
+        </div>
+
+        
+        <div id="view-applications" class="panel hidden">
+          <h2>Applications Received</h2>
+          <div id="admin-applications-list" class="card-list">
+          
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </section>
+
+
+  <!-- SEEKER DASHBOARD -->
+  <!-- Only visible when logged-in user's role is "Seeker" -->
+  
+  <section id="seeker-dashboard" class="section hidden">
+    <div class="dashboard-container">
+
+      <!-- Seeker Sidebar Navigation -->
+      <aside class="dashboard-sidebar">
+        <h2>Job Seeker</h2>
+        <button class="sidebar-btn active" data-panel="job-feed">Job Feed</button>
+        <button class="sidebar-btn" data-panel="my-applications">My Applications</button>
+      </aside>
+
+      <main class="dashboard-main">
+           
+        <div id="job-feed" class="panel">
+          <h2>Available Jobs</h2>
+          <input type="text" id="job-search-input" placeholder="Search jobs or companies..." style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;">
+    <div id="job-feed-list" class="job-grid"></div>
+
+          <div id="job-feed-list" class="card-list">
+          </div>
+        </div>
+
+        <div id="my-applications" class="panel hidden">
+          <h2>My Applications</h2>
+          <div id="my-applications-list" class="card-list">
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
