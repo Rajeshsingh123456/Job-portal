@@ -266,26 +266,156 @@ function JobDetails() {
 
 
 function Login() {
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    const username = e.target.username.value;
+    const password = e.target.password.value;
+
+    try {
+      const response = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Login successful!");
+        console.log("Logged in user:", data.user);
+      } else {
+        alert(data.error || "Invalid username or password");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("Backend se connection nahi ho raha.");
+    }
+  };
+
   return (
-    <div className="simple-page">
-      <h1>Login</h1>
-      <p>Login page will be connected to our backend next.</p>
-      <Link to="/" className="back-btn">
-        ← Back to Home
-      </Link>
+    <div className="auth-page">
+      <div className="auth-card">
+        <Link to="/" className="logo">
+          Job<span>Connect</span>
+        </Link>
+
+        <h1>Welcome Back</h1>
+        <p>Login to your JobConnect account</p>
+
+        <form onSubmit={handleLogin}>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+
+          <button type="submit">Login</button>
+        </form>
+
+        <p className="auth-footer">
+          Don't have an account?{" "}
+          <Link to="/register">Create Account</Link>
+        </p>
+
+        <Link to="/" className="back-btn">
+          ← Back to Home
+        </Link>
+      </div>
     </div>
   );
 }
 
 
 function Register() {
+  const handleRegister = async (e) => {
+    e.preventDefault();
+
+    const username = e.target.username.value;
+    const password = e.target.password.value;
+
+    try {
+      const response = await fetch("http://localhost:3000/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username,
+          password,
+          role: "Seeker",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Registration successful!");
+
+        e.target.reset();
+      } else {
+        alert(data.error || "Registration failed");
+      }
+    } catch (error) {
+      console.error("Register error:", error);
+      alert("Backend se connection nahi ho raha.");
+    }
+  };
+
   return (
-    <div className="simple-page">
-      <h1>Create Account</h1>
-      <p>Registration page will be connected to our backend next.</p>
-      <Link to="/" className="back-btn">
-        ← Back to Home
-      </Link>
+    <div className="auth-page">
+      <div className="auth-card">
+        <Link to="/" className="logo">
+          Job<span>Connect</span>
+        </Link>
+
+        <h1>Create Account</h1>
+        <p>Join JobConnect and find your next opportunity</p>
+
+        <form onSubmit={handleRegister}>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+
+          <select defaultValue="Seeker" disabled>
+            <option value="Seeker">Job Seeker</option>
+          </select>
+
+          <button type="submit">Create Account</button>
+        </form>
+
+        <p className="auth-footer">
+          Already have an account?{" "}
+          <Link to="/login">Login</Link>
+        </p>
+
+        <Link to="/" className="back-btn">
+          ← Back to Home
+        </Link>
+      </div>
     </div>
   );
 }
