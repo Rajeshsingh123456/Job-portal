@@ -1,5 +1,7 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
+import SeekerDashboard from "./pages/SeekerDashboard";
 import "./App.css";
+
 
 function Home() {
   return (
@@ -264,8 +266,9 @@ function JobDetails() {
   );
 }
 
-
 function Login() {
+  const navigate = useNavigate();
+
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -288,7 +291,10 @@ function Login() {
 
       if (response.ok) {
         alert("Login successful!");
+
         console.log("Logged in user:", data.user);
+
+        navigate("/seeker-dashboard");
       } else {
         alert(data.error || "Invalid username or password");
       }
@@ -401,7 +407,7 @@ function Register() {
           />
 
           <select defaultValue="Seeker" disabled>
-            <option value="Seeker">Job Seeker</option>
+             {/* <option value="Seeker">Job Seeker</option>  */}
           </select>
 
           <button type="submit">Create Account</button>
@@ -430,6 +436,9 @@ function App() {
         <Route path="/jobs/:id" element={<JobDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/seeker-dashboard" element={<SeekerDashboard />} />
+
+
       </Routes>
     </BrowserRouter>
   );

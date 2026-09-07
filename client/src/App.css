@@ -544,7 +544,12 @@ footer {
 
 .auth-card h1 {
   margin-bottom: 8px;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
 }
+
 
 .auth-card > p {
   color: #64748b;
