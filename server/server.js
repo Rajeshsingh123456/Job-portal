@@ -13,12 +13,28 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 // REGISTER & LOGIN 
 app.post('/register', (req, res) => {
-  const { username, password, role } = req.body;
-  const sql = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
-  db.query(sql, [username, password, role], (err, result) => {
-    if (err) return res.status(500).json({ error: 'Insert failed' });
-    res.json({ message: 'Registered', id: result.insertId });
-  });
+  const { username, email, companyName, password, role } = req.body;
+
+  const sql = `
+    INSERT INTO users (username, email, companyName, password, role)
+    VALUES (?, ?, ?, ?, ?)
+  `;
+
+  db.query(
+    sql,
+    [username, email, companyName || null, password, role],
+    (err, result) => {
+      if (err) {
+        console.log("Register Error:", err);
+        return res.status(500).json({ error: "Registration failed" });
+      }
+
+      res.json({
+        message: "Registered successfully",
+        id: result.insertId
+      });
+    }
+  );
 });
 
 app.post('/login', (req, res) => {

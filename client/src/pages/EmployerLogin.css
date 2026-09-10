@@ -1,0 +1,135 @@
+.employer-login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #f8fafc;
+}
+
+.employer-login-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 45px 40px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.employer-login-card .logo {
+  display: block;
+  margin-bottom: 28px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.employer-login-card .logo span {
+  color: #2563eb;
+}
+
+.login-tag {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.employer-login-card h1 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #111827;
+  font-size: 30px;
+}
+
+.login-text {
+  margin-bottom: 28px;
+  text-align: center;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #2563eb;
+}
+
+.login-submit-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-submit-btn:hover {
+  background: #1d4ed8;
+}
+
+.register-link {
+  margin-top: 22px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-employer-btn {
+  display: block;
+  margin-top: 18px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.back-employer-btn:hover {
+  color: #2563eb;
+}
+
+@media (max-width: 600px) {
+  .employer-login-card {
+    padding: 35px 24px;
+  }
+
+  .employer-login-card h1 {
+    font-size: 26px;
+  }
+}

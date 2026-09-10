@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
 import SeekerDashboard from "./pages/SeekerDashboard";
+import Employer from "./pages/Employer";
+import EmployerRegister from "./pages/EmployerRegister";
+import EmployerLogin from "./pages/EmployerLogin";
 import "./App.css";
 
 
@@ -12,17 +15,23 @@ function Home() {
           Job<span>Connect</span>
         </Link>
 
-        <div className="nav-links">
-          <a href="#jobs">Find Jobs</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-          <Link to="/login" className="login-btn">
-            Login
-          </Link>
-          <Link to="/register" className="register-btn">
-            Register
-          </Link>
-        </div>
+       <div className="nav-links">
+  <a href="#jobs">Find Jobs</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+
+  <Link to="/employers" className="employer-btn">
+    For Employers
+  </Link>
+
+  <Link to="/login" className="login-btn">
+    Login
+  </Link>
+
+  <Link to="/register" className="register-btn">
+    Register
+  </Link>
+</div>
       </nav>
 
       {/* Hero Section */}
@@ -437,6 +446,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/seeker-dashboard" element={<SeekerDashboard />} />
+        <Route path="/employers" element={<Employer />} />
+        <Route path="/employer-register" element={<EmployerRegister />} />
+        <Route path="/employer-login" element={<EmployerLogin />} />
 
 
       </Routes>
