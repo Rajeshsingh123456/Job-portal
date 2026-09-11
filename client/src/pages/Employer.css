@@ -21,16 +21,18 @@
 }
 
 .employer-card .logo {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 35px;
   text-decoration: none;
-  font-size: 26px;
-  font-weight: 700;
-  color: #111827;
 }
 
-.employer-card .logo span {
-  color: #2563eb;
+.employer-card .logo img {
+  width: 145px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .employer-tag {

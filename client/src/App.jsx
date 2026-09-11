@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
+import hirepulseLogo from "./assets/hirepulse-logo.png";
 import SeekerDashboard from "./pages/SeekerDashboard";
 import Employer from "./pages/Employer";
 import EmployerRegister from "./pages/EmployerRegister";
@@ -12,8 +13,8 @@ function Home() {
       {/* Navbar */}
       <nav className="navbar">
         <Link to="/" className="logo">
-          Job<span>Connect</span>
-        </Link>
+  <img src={hirepulseLogo} alt="HirePulse" />
+</Link>
 
        <div className="nav-links">
   <a href="#jobs">Find Jobs</a>
@@ -177,12 +178,12 @@ function Home() {
       {/* Footer */}
       <footer id="contact">
         <div className="logo">
-          Job<span>Connect</span>
-        </div>
+  <img src={hirepulseLogo} alt="HirePulse" />
+</div>
 
         <p>Connecting talent with opportunity.</p>
 
-        <p>© 2026 JobConnect. All rights reserved.</p>
+       <p>© 2026 HirePulse. All rights reserved.</p>
       </footer>
     </div>
   );
@@ -317,11 +318,11 @@ function Login() {
     <div className="auth-page">
       <div className="auth-card">
         <Link to="/" className="logo">
-          Job<span>Connect</span>
+           <img src={hirepulseLogo} alt="HirePulse" />
         </Link>
 
         <h1>Welcome Back</h1>
-        <p>Login to your JobConnect account</p>
+        <p>Login to your HirePulse account</p>
 
         <form onSubmit={handleLogin}>
           <input
@@ -393,12 +394,12 @@ function Register() {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <Link to="/" className="logo">
-          Job<span>Connect</span>
-        </Link>
+       <Link to="/" className="logo">
+  <img src={hirepulseLogo} alt="HirePulse" />
+</Link>
 
         <h1>Create Account</h1>
-        <p>Join JobConnect and find your next opportunity</p>
+        <p>Join HirePulse and find your next opportunity</p>
 
         <form onSubmit={handleRegister}>
           <input

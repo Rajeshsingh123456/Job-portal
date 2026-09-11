@@ -31,7 +31,6 @@ a {
 }
 
 /* NAVBAR */
-
 .navbar {
   height: 76px;
   display: flex;
@@ -43,13 +42,16 @@ a {
 }
 
 .logo {
-  font-size: 25px;
-  font-weight: 800;
-  color: #172033;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.logo span {
-  color: #2563eb;
+.logo img {
+  width: 145px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -538,7 +540,8 @@ footer {
 }
 
 .auth-card .logo {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-bottom: 25px;
 }
 

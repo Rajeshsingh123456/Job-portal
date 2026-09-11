@@ -18,16 +18,20 @@
   border-bottom: 1px solid #e5e7eb;
 }
 
+
 .dashboard-page .logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-size: 26px;
-  font-weight: 700;
-  color: #111827;
 }
 
-.dashboard-page .logo span {
-  color: #2563eb;
+.dashboard-page .logo img {
+  width: 145px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
+
 
 .dashboard-page .nav-links {
   display: flex;
@@ -156,9 +160,6 @@
     padding: 0 20px;
   }
 
-  .dashboard-page .logo {
-    font-size: 22px;
-  }
 
   .dashboard-page .nav-links {
     gap: 12px;

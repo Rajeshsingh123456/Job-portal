@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
+import hirepulseLogo from "../assets/hirepulse-logo.png";
 import "./Employer.css";
 
 function Employer() {
   return (
     <div className="employer-page">
       <div className="employer-card">
-        <Link to="/" className="logo">
-          Job<span>Connect</span>
-        </Link>
+       <Link to="/" className="logo">
+  <img src={hirepulseLogo} alt="HirePulse" />
+</Link>
 
         <p className="employer-tag">FOR EMPLOYERS</p>
 
@@ -15,7 +16,7 @@ function Employer() {
 
         <p className="employer-text">
           Post jobs, discover skilled candidates, and build your team with
-          JobConnect.
+          Hire Pulse.
         </p>
 
         <div className="employer-actions">

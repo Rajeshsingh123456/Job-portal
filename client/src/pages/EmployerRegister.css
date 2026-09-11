@@ -18,17 +18,18 @@
 }
 
 .employer-register-card .logo {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 28px;
-  text-align: center;
   text-decoration: none;
-  font-size: 26px;
-  font-weight: 700;
-  color: #111827;
 }
 
-.employer-register-card .logo span {
-  color: #2563eb;
+.employer-register-card .logo img {
+  width: 145px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .register-tag {

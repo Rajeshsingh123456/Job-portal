@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import "./SeekerDashboard.css";
+import hirepulseLogo from "../assets/hirepulse-logo.png";
+
 function SeekerDashboard() {
   return (
     <div className="dashboard-page">
       <nav className="navbar">
         <Link to="/" className="logo">
-          Job<span>Connect</span>
-        </Link>
+  <img src={hirepulseLogo} alt="HirePulse" />
+</Link>
 
         <div className="nav-links">
           <Link to="/jobs">Find Jobs</Link>
@@ -20,7 +22,7 @@ function SeekerDashboard() {
       <section className="dashboard-header">
         <p className="section-tag">JOB SEEKER</p>
 
-        <h1>Welcome to JobConnect 👋</h1>
+        <h1>Welcome to HirePulse 👋</h1>
 
         <p>
           Find the right opportunity and take the next step in your career.

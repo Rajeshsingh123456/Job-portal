@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./EmployerLogin.css";
+import hirepulseLogo from "../assets/hirepulse-logo.png";
 
 function EmployerLogin() {
   const navigate = useNavigate();
@@ -54,9 +55,9 @@ function EmployerLogin() {
     <div className="employer-login-page">
       <div className="employer-login-card">
 
-        <Link to="/" className="logo">
-          Job<span>Connect</span>
-        </Link>
+       <Link to="/" className="logo">
+  <img src={hirepulseLogo} alt="HirePulse" />
+</Link>
 
         <p className="login-tag">FOR EMPLOYERS</p>
 
