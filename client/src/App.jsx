@@ -4,6 +4,8 @@ import SeekerDashboard from "./pages/SeekerDashboard";
 import Employer from "./pages/Employer";
 import EmployerRegister from "./pages/EmployerRegister";
 import EmployerLogin from "./pages/EmployerLogin";
+import EmployerDashboard from "./pages/EmployerDashboard";
+import PostJob from "./pages/PostJob";
 import "./App.css";
 
 
@@ -450,6 +452,8 @@ function App() {
         <Route path="/employers" element={<Employer />} />
         <Route path="/employer-register" element={<EmployerRegister />} />
         <Route path="/employer-login" element={<EmployerLogin />} />
+        <Route path="/employer-dashboard" element={<EmployerDashboard />}/>
+        <Route path="/post-job" element={<PostJob />} />
 
 
       </Routes>
