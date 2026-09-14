@@ -1,11 +1,9 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/hirepulse-logo.png";
+import { Link } from "react-router-dom";
 import "./EmployerDashboard.css";
+import EmployerNavbar from "../components/employer/EmployerNavbar";
+import EmployerFooter from "../components/employer/EmployerFooter";
 
 function EmployerDashboard() {
-  const navigate = useNavigate();
-  const [profileOpen, setProfileOpen] = useState(false);
 
   // Temporary recruiter data
   // Backend integration baad me yahin connect karenge.
@@ -66,135 +64,10 @@ function EmployerDashboard() {
   const recentApplications = [];
   const upcomingInterviews = [];
 
-  const handleLogout = () => {
-    navigate("/");
-  };
-
   return (
     <div className="employer-dashboard">
 
-      {/* =====================================================
-          TOP NAVBAR
-      ===================================================== */}
-
-      <header className="employer-navbar">
-
-        <div className="employer-brand">
-          <Link to="/employer-dashboard">
-            <img
-              src={logo}
-              alt="HirePulse"
-              className="employer-logo"
-            />
-          </Link>
-        </div>
-
-        <nav className="employer-nav-links">
-
-          <Link
-            to="/employer-dashboard"
-            className="active"
-          >
-            Dashboard
-          </Link>
-
-          <Link to="/employer-jobs">
-            My Jobs
-          </Link>
-
-          <Link to="/employer-applicants">
-            Applicants
-          </Link>
-
-          <Link to="/employer-interviews">
-            Interviews
-          </Link>
-
-          <Link to="/about">
-            About HirePulse
-          </Link>
-
-        </nav>
-
-        <div className="employer-nav-right">
-
-          {/* Search */}
-          <div className="employer-search">
-            <span>⌕</span>
-            <input
-              type="text"
-              placeholder="Search candidates, skills, jobs..."
-            />
-          </div>
-
-          {/* Notifications */}
-          <button
-            className="nav-icon-button"
-            type="button"
-            aria-label="Notifications"
-          >
-            🔔
-            <span className="notification-count">0</span>
-          </button>
-
-          {/* Messages */}
-          <button
-            className="nav-icon-button"
-            type="button"
-            aria-label="Messages"
-          >
-            💬
-          </button>
-
-          {/* Profile */}
-          <div className="profile-wrapper">
-
-            <button
-              type="button"
-              className="profile-button"
-              onClick={() => setProfileOpen(!profileOpen)}
-            >
-              <div className="profile-avatar">
-                {employer.name.charAt(0).toUpperCase()}
-              </div>
-
-              <div className="profile-info">
-                <strong>{employer.name}</strong>
-                <span>{employer.role}</span>
-              </div>
-
-              <span className="profile-arrow">
-                {profileOpen ? "▲" : "▼"}
-              </span>
-            </button>
-
-            {profileOpen && (
-              <div className="profile-menu">
-
-                <Link to="/employer-profile">
-                  My Profile
-                </Link>
-
-                <Link to="/employer-profile/edit">
-                  Edit Profile
-                </Link>
-
-                <button
-                  type="button"
-                  onClick={handleLogout}
-                >
-                  Logout
-                </button>
-
-              </div>
-            )}
-
-          </div>
-
-        </div>
-
-      </header>
-
+      <EmployerNavbar />
 
       {/* =====================================================
           MAIN
@@ -281,6 +154,7 @@ function EmployerDashboard() {
               </div>
 
               <div>
+
                 <p className="quick-start-label">
                   QUICK GET STARTED
                 </p>
@@ -288,6 +162,7 @@ function EmployerDashboard() {
                 <h2>
                   Complete your hiring setup in 3 easy steps
                 </h2>
+
               </div>
 
             </div>
@@ -296,6 +171,7 @@ function EmployerDashboard() {
             <div className="quick-start-steps">
 
               {/* STEP 1 */}
+
               <div className="quick-start-step">
 
                 <div className="step-number">
@@ -323,6 +199,7 @@ function EmployerDashboard() {
 
 
               {/* STEP 2 */}
+
               <div className="quick-start-step">
 
                 <div className="step-number">
@@ -350,6 +227,7 @@ function EmployerDashboard() {
 
 
               {/* STEP 3 */}
+
               <div className="quick-start-step">
 
                 <div className="step-number">
@@ -926,125 +804,11 @@ function EmployerDashboard() {
       </main>
 
 
-      {/* =====================================================
-          FOOTER
-      ===================================================== */}
+     {/* =====================================================
+    FOOTER 
+===================================================== */}
 
-      <footer className="employer-footer">
-
-        <div className="footer-grid">
-
-
-          <div className="footer-brand">
-
-            <img
-              src={logo}
-              alt="HirePulse"
-            />
-
-            <p>
-              HirePulse helps employers manage jobs,
-              candidates and interviews through one
-              simple recruitment workspace.
-            </p>
-
-          </div>
-
-
-          <div className="footer-column">
-
-            <h4>
-              For Employers
-            </h4>
-
-            <Link to="/employer-dashboard">
-              Dashboard
-            </Link>
-
-            <Link to="/employer-jobs">
-              My Jobs
-            </Link>
-
-            <Link to="/employer-applicants">
-              Applicants
-            </Link>
-
-            <Link to="/employer-interviews">
-              Interviews
-            </Link>
-
-            <Link to="/post-job">
-              Post a Job
-            </Link>
-
-          </div>
-
-
-          <div className="footer-column">
-
-            <h4>
-              HirePulse
-            </h4>
-
-            <Link to="/">
-              Home
-            </Link>
-
-            <Link to="/find-jobs">
-              Find Jobs
-            </Link>
-
-            <Link to="/about">
-              About HirePulse
-            </Link>
-
-          </div>
-
-
-          <div className="footer-column">
-
-            <h4>
-              Account
-            </h4>
-
-            <Link to="/employer-profile">
-              My Profile
-            </Link>
-
-            <Link to="/employer-profile/edit">
-              Edit Profile
-            </Link>
-
-            <button
-              type="button"
-              onClick={() =>
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth",
-                })
-              }
-            >
-              Back to Top
-            </button>
-
-          </div>
-
-        </div>
-
-
-        <div className="footer-bottom">
-
-          <span>
-            © 2026 HirePulse. All rights reserved.
-          </span>
-
-          <span>
-            Built for smarter hiring.
-          </span>
-
-        </div>
-
-      </footer>
+<EmployerFooter />
 
     </div>
   );

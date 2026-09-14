@@ -6,6 +6,10 @@ import EmployerRegister from "./pages/EmployerRegister";
 import EmployerLogin from "./pages/EmployerLogin";
 import EmployerDashboard from "./pages/EmployerDashboard";
 import PostJob from "./pages/PostJob";
+import EmployerJobs from "./pages/EmployerJobs";
+import EmployerApplicants from "./pages/EmployerApplicants";
+import EmployerInterviews from "./pages/EmployerInterviews";
+import EmployerProfile from "./pages/EmployerProfile";
 import "./App.css";
 
 
@@ -454,7 +458,18 @@ function App() {
         <Route path="/employer-login" element={<EmployerLogin />} />
         <Route path="/employer-dashboard" element={<EmployerDashboard />}/>
         <Route path="/post-job" element={<PostJob />} />
+        <Route path="/employer-jobs" element={<EmployerJobs />} />
+        <Route path="/employer-applicants" element={<EmployerApplicants />}/>
+       <Route path="/employer-interviews" element={<EmployerInterviews />}/>
+<Route
+  path="/employer-profile"
+  element={<EmployerProfile />}
+/>
 
+<Route
+  path="/employer-profile/edit"
+  element={<EmployerProfile />}
+/>
 
       </Routes>
     </BrowserRouter>

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/hirepulse-logo.png";
 import "./PostJob.css";
+import EmployerNavbar from "../components/employer/EmployerNavbar";
+import EmployerFooter from "../components/employer/EmployerFooter";
 
 function PostJob() {
   const [formData, setFormData] = useState({
@@ -43,34 +44,7 @@ function PostJob() {
   return (
     <div className="post-job-page">
 
-      {/* NAVBAR */}
-      <nav className="post-job-navbar">
-        <div className="post-job-logo">
-          <Link to="/employer-dashboard">
-            <img src={logo} alt="HirePulse" />
-          </Link>
-        </div>
-
-        <div className="post-job-nav-links">
-          <Link to="/employer-dashboard">Dashboard</Link>
-          <Link to="/employer-jobs">My Jobs</Link>
-          <Link to="/employer-applicants">Applicants</Link>
-          <Link to="/employer-interviews">Interviews</Link>
-        </div>
-
-        <div className="post-job-profile">
-          <div className="post-job-notification">🔔</div>
-
-          <div className="post-job-user">
-            <div className="post-job-avatar">N</div>
-            <div>
-              <strong>Nitesh</strong>
-              <span>Employer</span>
-            </div>
-            <span className="profile-arrow">▼</span>
-          </div>
-        </div>
-      </nav>
+      <EmployerNavbar />
 
       {/* PAGE HEADER */}
       <section className="post-job-header">
@@ -219,6 +193,7 @@ function PostJob() {
 
                 <div className="input-with-prefix">
                   <span>₹</span>
+
                   <input
                     type="number"
                     name="salaryMin"
@@ -229,13 +204,16 @@ function PostJob() {
                 </div>
               </div>
 
-              <div className="salary-divider">to</div>
+              <div className="salary-divider">
+                to
+              </div>
 
               <div className="form-group">
                 <label>Maximum Salary</label>
 
                 <div className="input-with-prefix">
                   <span>₹</span>
+
                   <input
                     type="number"
                     name="salaryMax"
@@ -259,7 +237,9 @@ function PostJob() {
               <div className="section-icon">📝</div>
               <div>
                 <h2>Job Description</h2>
-                <p>Describe the role and what the selected candidate will do.</p>
+                <p>
+                  Describe the role and what the selected candidate will do.
+                </p>
               </div>
             </div>
 
@@ -300,7 +280,9 @@ function PostJob() {
               <div className="section-icon">🎯</div>
               <div>
                 <h2>Requirements</h2>
-                <p>Define the qualifications and skills you're looking for.</p>
+                <p>
+                  Define the qualifications and skills you're looking for.
+                </p>
               </div>
             </div>
 
@@ -342,7 +324,9 @@ function PostJob() {
               <div className="section-icon">🎁</div>
               <div>
                 <h2>Perks & Benefits</h2>
-                <p>Highlight additional benefits offered with the position.</p>
+                <p>
+                  Highlight additional benefits offered with the position.
+                </p>
               </div>
             </div>
 
@@ -371,6 +355,7 @@ function PostJob() {
             </button>
 
             <div className="publish-actions">
+
               <Link
                 to="/employer-dashboard"
                 className="cancel-button"
@@ -384,6 +369,7 @@ function PostJob() {
               >
                 Publish Job
               </button>
+
             </div>
 
           </section>
@@ -392,15 +378,7 @@ function PostJob() {
 
       </main>
 
-      {/* FOOTER */}
-      <footer className="post-job-footer">
-        <div>
-          <img src={logo} alt="HirePulse" />
-          <p>Connecting great talent with great opportunities.</p>
-        </div>
-
-        <p>© 2026 HirePulse. All rights reserved.</p>
-      </footer>
+      <EmployerFooter />
 
     </div>
   );
