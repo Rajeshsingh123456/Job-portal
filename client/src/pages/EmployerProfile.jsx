@@ -6,7 +6,7 @@ import EmployerFooter from "../components/employer/EmployerFooter";
 function EmployerProfile() {
   const employer = {
     name: "Nitesh",
-    role: "Employer",
+    role: "Recruiter",
     email: "nitesh@gmail.com",
     phone: "Not added",
     company: "HirePulse Company",
@@ -28,7 +28,7 @@ function EmployerProfile() {
 
             <div className="profile-heading-content">
               <span className="profile-breadcrumb">
-                Employer / Profile
+                Recruiter / Profile
               </span>
 
               <h1>{employer.name}</h1>
@@ -201,7 +201,7 @@ function EmployerProfile() {
 
               <p>
                 Add your company and contact details to build a stronger
-                employer profile.
+                recruiter profile.
               </p>
 
               <Link to="/employer-profile/edit">

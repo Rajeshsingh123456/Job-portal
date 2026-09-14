@@ -27,7 +27,7 @@ function EmployerFooter() {
         <div className="footer-column">
 
           <h4>
-            For Employers
+            For Recruiter
           </h4>
 
           <Link to="/employer-dashboard">

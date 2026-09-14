@@ -85,7 +85,7 @@ function EmployerNavbar() {
 
             <div className="employer-profile-details">
               <strong>Nitesh</strong>
-              <span>Employer</span>
+              <span>Recruiter</span>
             </div>
 
             <span className="profile-arrow">

@@ -10,6 +10,8 @@ import EmployerJobs from "./pages/EmployerJobs";
 import EmployerApplicants from "./pages/EmployerApplicants";
 import EmployerInterviews from "./pages/EmployerInterviews";
 import EmployerProfile from "./pages/EmployerProfile";
+import EmployerProfileEdit from "./pages/EmployerProfileEdit";
+import About from "./pages/About";
 import "./App.css";
 
 
@@ -461,15 +463,11 @@ function App() {
         <Route path="/employer-jobs" element={<EmployerJobs />} />
         <Route path="/employer-applicants" element={<EmployerApplicants />}/>
        <Route path="/employer-interviews" element={<EmployerInterviews />}/>
-<Route
-  path="/employer-profile"
-  element={<EmployerProfile />}
-/>
+       <Route path="/employer-profile" element={<EmployerProfile />}/>
+       <Route path="/employer-profile/edit" element={<EmployerProfileEdit />}/>
+       <Route path="/about" element={<About />} />
 
-<Route
-  path="/employer-profile/edit"
-  element={<EmployerProfile />}
-/>
+
 
       </Routes>
     </BrowserRouter>

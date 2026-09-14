@@ -1,0 +1,601 @@
+.about-page {
+  min-height: 100vh;
+  background: #f6f8fc;
+  color: #171a2b;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.about-hero {
+  width: 100%;
+  padding: 78px 6%;
+  background: #111426;
+  color: #ffffff;
+  border-bottom: 1px solid #20243a;
+}
+
+.about-hero-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-breadcrumb {
+  display: block;
+  margin-bottom: 22px;
+  color: #9ea4ba;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.about-hero h1 {
+  max-width: 850px;
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: 48px;
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.about-hero p {
+  max-width: 780px;
+  margin: 0;
+  color: #b4b9ca;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.about-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* =========================
+   COMMON SECTION HEADING
+========================= */
+
+.about-section-heading {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto 48px;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 25px;
+}
+
+.about-section-number {
+  padding-top: 4px;
+  color: #5267d9;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.about-section-heading span,
+.about-support-header span {
+  display: block;
+  margin-bottom: 12px;
+  color: #73798a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.about-section-heading h2,
+.about-support-header h2 {
+  margin: 0 0 12px;
+  color: #171a2b;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.about-section-heading p,
+.about-support-header p {
+  max-width: 680px;
+  margin: 0;
+  color: #73798a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================
+   SECTION 01
+   WORKFLOW
+========================= */
+
+.about-workflow {
+  width: 100%;
+  padding: 90px 6%;
+  background: #f6f8fc;
+}
+
+.about-workflow-grid {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #ffffff;
+  border: 1px solid #e1e5ed;
+}
+
+.about-workflow-card {
+  min-height: 330px;
+  padding: 30px;
+  border-right: 1px solid #e1e5ed;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease;
+}
+
+.about-workflow-card:last-child {
+  border-right: none;
+}
+
+.about-workflow-card:hover {
+  background: #fbfcff;
+}
+
+.workflow-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.workflow-card-top > span {
+  color: #b0b5c4;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.workflow-icon {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #dfe3eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5267d9;
+  font-size: 17px;
+}
+
+.about-workflow-card h3 {
+  margin: 62px 0 12px;
+  color: #1b1e30;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.about-workflow-card p {
+  margin: 0;
+  color: #73798a;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.workflow-link {
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 24px;
+  color: #5267d9;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.workflow-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   SECTION 02
+   CAPABILITIES
+========================= */
+
+.about-capabilities {
+  width: 100%;
+  padding: 90px 6%;
+  background: #ffffff;
+}
+
+.capabilities-grid {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #e1e5ed;
+  border-left: 1px solid #e1e5ed;
+}
+
+.capability-card {
+  min-height: 190px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 24px;
+  border-right: 1px solid #e1e5ed;
+  border-bottom: 1px solid #e1e5ed;
+  transition: 0.2s ease;
+}
+
+.capability-card:hover {
+  background: #fbfcff;
+}
+
+.capability-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f4fa;
+  border: 1px solid #e1e5ed;
+  color: #5267d9;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.capability-card h3 {
+  margin: 2px 0 10px;
+  color: #1b1e30;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.capability-card p {
+  margin: 0;
+  color: #73798a;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================
+   SECTION 03
+   SUPPORT
+========================= */
+
+.about-support {
+  width: 100%;
+  padding: 90px 6%;
+  background: #f6f8fc;
+}
+
+.about-support-header {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto 48px;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 25px;
+}
+
+.support-grid {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.support-card {
+  min-height: 250px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e1e5ed;
+  transition: 0.2s ease;
+}
+
+.support-card:hover {
+  border-color: #cfd5e3;
+  transform: translateY(-2px);
+}
+
+.support-question {
+  display: block;
+  margin-bottom: 28px;
+  color: #5267d9;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.support-card h3 {
+  margin: 0 0 12px;
+  color: #1b1e30;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.support-card p {
+  margin: 0;
+  color: #73798a;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.support-card a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #5267d9;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.support-card a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.about-primary-button,
+.about-secondary-button {
+  min-height: 46px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.about-primary-button {
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  color: #111426;
+}
+
+.about-primary-button:hover {
+  background: #e9ebf1;
+  border-color: #e9ebf1;
+}
+
+.about-secondary-button {
+  border: 1px solid #41465d;
+  background: transparent;
+  color: #ffffff;
+}
+
+.about-secondary-button:hover {
+  background: #1b1f33;
+  border-color: #626980;
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.about-closing {
+  width: 100%;
+  padding: 78px 6%;
+  background: #111426;
+  color: #ffffff;
+  text-align: center;
+  border-top: 1px solid #20243a;
+}
+
+.about-closing-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-closing-content > span {
+  display: block;
+  margin-bottom: 17px;
+  color: #9298ae;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.about-closing h2 {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.about-closing p {
+  max-width: 570px;
+  margin: 0 auto 28px;
+  color: #a6abbd;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.about-closing-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+  .about-workflow-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-workflow-card:nth-child(2) {
+    border-right: none;
+  }
+
+  .about-workflow-card:nth-child(1),
+  .about-workflow-card:nth-child(2) {
+    border-bottom: 1px solid #e1e5ed;
+  }
+
+  .about-workflow-card:nth-child(3),
+  .about-workflow-card:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .about-hero {
+    padding: 55px 5% 50px;
+  }
+
+  .about-hero-content {
+    text-align: center;
+  }
+
+  .about-hero h1 {
+    font-size: 36px;
+  }
+
+  .about-hero p {
+    font-size: 14px;
+  }
+
+  .about-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-hero-actions .about-primary-button,
+  .about-hero-actions .about-secondary-button {
+    width: 100%;
+  }
+
+  .about-section-heading,
+  .about-support-header {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .about-section-heading h2,
+  .about-support-header h2 {
+    font-size: 29px;
+  }
+
+  .about-workflow,
+  .about-capabilities,
+  .about-support {
+    padding: 65px 5%;
+  }
+
+  .about-workflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-workflow-card {
+    min-height: 280px;
+    border-right: none;
+    border-bottom: 1px solid #e1e5ed;
+  }
+
+  .about-workflow-card:nth-child(3),
+  .about-workflow-card:nth-child(4) {
+    border-bottom: 1px solid #e1e5ed;
+  }
+
+  .about-workflow-card:last-child {
+    border-bottom: none;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-card {
+    min-height: auto;
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .support-card {
+    min-height: auto;
+  }
+
+  .about-closing {
+    padding: 65px 5%;
+  }
+
+  .about-closing h2 {
+    font-size: 30px;
+  }
+
+  .about-closing-actions {
+    flex-direction: column;
+  }
+
+  .about-closing-actions .about-primary-button,
+  .about-closing-actions .about-secondary-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+  .about-hero {
+    padding: 45px 5% 42px;
+  }
+
+  .about-hero h1 {
+    font-size: 30px;
+  }
+
+  .about-hero p {
+    font-size: 13px;
+  }
+
+  .about-workflow,
+  .about-capabilities,
+  .about-support {
+    padding: 50px 5%;
+  }
+
+  .about-section-heading h2,
+  .about-support-header h2 {
+    font-size: 26px;
+  }
+
+  .about-workflow-card,
+  .capability-card,
+  .support-card {
+    padding: 24px 20px;
+  }
+
+  .about-closing {
+    padding: 55px 5%;
+  }
+
+  .about-closing h2 {
+    font-size: 27px;
+  }
+}
