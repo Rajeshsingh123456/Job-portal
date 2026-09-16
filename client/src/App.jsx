@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
 import hirepulseLogo from "./assets/hirepulse-logo.png";
-import SeekerDashboard from "./pages/SeekerDashboard";
+import SeekerDashboard from "./pages/seeker/SeekerDashboard";
 import Employer from "./pages/Employer";
 import EmployerRegister from "./pages/EmployerRegister";
 import EmployerLogin from "./pages/EmployerLogin";
@@ -12,7 +12,9 @@ import EmployerInterviews from "./pages/EmployerInterviews";
 import EmployerProfile from "./pages/EmployerProfile";
 import EmployerProfileEdit from "./pages/EmployerProfileEdit";
 import About from "./pages/About";
+import FindJobs from "./pages/seeker/FindJobs";
 import "./App.css";
+
 
 
 function Home() {
@@ -450,7 +452,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/jobs" element={<FindJobs />} />
         <Route path="/jobs/:id" element={<JobDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
