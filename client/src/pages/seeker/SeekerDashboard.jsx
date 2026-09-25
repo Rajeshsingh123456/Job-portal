@@ -4,283 +4,301 @@ import SeekerNavbar from "../../components/seeker/SeekerNavbar";
 import SeekerFooter from "../../components/seeker/SeekerFooter";
 
 function SeekerDashboard() {
-  const applications = [];
-  const recommendedJobs = [];
+  const recommendedJobs = [
+    {
+      id: 1,
+      company: "TechCorp Inc.",
+      initials: "TC",
+      title: "Senior React Developer",
+      location: "Delhi / Gurgaon",
+      type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹8,00,000 - ₹12,00,000",
+      posted: "2 days ago",
+      skills: ["React.js", "JavaScript", "Git"]
+    },
+    {
+      id: 2,
+      company: "InnovateX",
+      initials: "IX",
+      title: "Node.js Backend Engineer",
+      location: "Bangalore",
+      type: "Full-time",
+      experience: "1-3 years",
+      salary: "₹10,00,000 - ₹15,00,000",
+      posted: "3 days ago",
+      skills: ["Node.js", "Express", "MySQL"]
+    },
+    {
+      id: 3,
+      company: "PixelWorks",
+      initials: "PW",
+      title: "Frontend Developer",
+      location: "Remote",
+      type: "Full-time",
+      experience: "0-2 years",
+      salary: "₹5,00,000 - ₹8,00,000",
+      posted: "1 day ago",
+      skills: ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      id: 4,
+      company: "CodeSphere",
+      initials: "CS",
+      title: "Junior Full Stack Developer",
+      location: "Noida",
+      type: "Full-time",
+      experience: "0-2 years",
+      salary: "₹4,00,000 - ₹7,00,000",
+      posted: "4 days ago",
+      skills: ["React", "Node.js", "MongoDB"]
+    },
+    {
+      id: 5,
+      company: "WebNova",
+      initials: "WN",
+      title: "React.js Developer",
+      location: "Delhi NCR",
+      type: "Full-time",
+      experience: "1-2 years",
+      salary: "₹6,00,000 - ₹9,00,000",
+      posted: "5 days ago",
+      skills: ["React.js", "JavaScript", "CSS"]
+    },
+    {
+      id: 6,
+      company: "DevStack Labs",
+      initials: "DS",
+      title: "Backend Developer",
+      location: "Gurgaon",
+      type: "Full-time",
+      experience: "1-3 years",
+      salary: "₹7,00,000 - ₹11,00,000",
+      posted: "2 days ago",
+      skills: ["Node.js", "Express", "SQL"]
+    },
+    {
+      id: 7,
+      company: "BrightTech",
+      initials: "BT",
+      title: "Software Developer Intern",
+      location: "Remote",
+      type: "Internship",
+      experience: "Fresher",
+      salary: "₹15,000 - ₹25,000 / month",
+      posted: "Today",
+      skills: ["JavaScript", "React", "Git"]
+    },
+    {
+      id: 8,
+      company: "NextGen Solutions",
+      initials: "NG",
+      title: "Full Stack Developer",
+      location: "Pune",
+      type: "Full-time",
+      experience: "1-3 years",
+      salary: "₹8,00,000 - ₹13,00,000",
+      posted: "3 days ago",
+      skills: ["React", "Node.js", "MySQL"]
+    }
+  ];
 
   return (
     <div className="seeker-dashboard-page">
-
-      {/* Navbar */}
       <SeekerNavbar />
 
-      {/* Dashboard Breadcrumb */}
       <div className="seeker-dashboard-breadcrumb">
         Dashboard / Overview
       </div>
 
-      {/* Welcome Banner */}
+      {/* Welcome Hero */}
       <section className="seeker-welcome-banner">
         <div className="seeker-welcome-content">
-          <span className="seeker-section-tag">
-            JOB SEEKER DASHBOARD
-          </span>
+          <span className="seeker-section-tag">HIREPULSE JOB SEEKER</span>
 
-          <h1>Welcome back, Rajesh 👋</h1>
+          <h1>Find your next opportunity.</h1>
 
           <p>
-            Your profile matches 12 new jobs posted this week. Complete your
-            resume to get featured to top recruiters!
+            Discover jobs that match your skills, experience, and career
+            goals. Explore opportunities and take the next step in your career.
           </p>
 
-          <div className="seeker-profile-strength">
-            <div className="seeker-strength-info">
-              <span>Profile Strength</span>
-              <strong>⚡ 75%</strong>
-            </div>
+          <div className="seeker-welcome-actions">
+            <Link to="/jobs" className="seeker-primary-button">
+              Find Jobs
+            </Link>
 
-            <div className="seeker-strength-bar">
-              <span></span>
-            </div>
+            <Link
+              to="/seeker-profile/edit"
+              className="seeker-secondary-button"
+            >
+              Upload Resume
+            </Link>
           </div>
         </div>
 
-        <div className="seeker-welcome-actions">
-          <Link
-            to="/seeker-profile/edit"
-            className="seeker-primary-button"
-          >
-            📄 Update Resume
-          </Link>
-
-          <Link
-            to="/jobs"
-            className="seeker-secondary-button"
-          >
-            🎯 Find Jobs
-          </Link>
+        <div className="seeker-welcome-visual">
+          <div className="seeker-hero-card">
+            <span>CAREER OPPORTUNITIES</span>
+            <strong>Discover. Apply. Grow.</strong>
+            <p>
+              Explore relevant jobs and manage your career journey from one
+              place.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Application Tracking Stats */}
+      {/* Activity */}
       <section className="seeker-stats-section">
         <div className="seeker-section-heading">
-          <span>APPLICATION TRACKING</span>
-          <h2>Your activity at a glance</h2>
+          <span>YOUR ACTIVITY</span>
+          <h2>Track your job search</h2>
         </div>
 
         <div className="seeker-stats-grid">
-
           <div className="seeker-stat-card">
             <div className="seeker-stat-icon">📝</div>
-
             <div>
-              <span>APPLIED</span>
-              <strong>04</strong>
+              <span>APPLICATIONS</span>
+              <strong>0</strong>
               <p>Jobs applied</p>
             </div>
           </div>
 
           <div className="seeker-stat-card">
-            <div className="seeker-stat-icon">🔍</div>
-
+            <div className="seeker-stat-icon">🔖</div>
             <div>
-              <span>UNDER REVIEW</span>
-              <strong>02</strong>
-              <p>Applications under review</p>
+              <span>SAVED JOBS</span>
+              <strong>0</strong>
+              <p>Jobs saved</p>
             </div>
           </div>
 
           <div className="seeker-stat-card">
             <div className="seeker-stat-icon">📅</div>
-
             <div>
               <span>INTERVIEWS</span>
-              <strong>01</strong>
+              <strong>0</strong>
               <p>Scheduled interviews</p>
             </div>
           </div>
 
           <div className="seeker-stat-card">
-            <div className="seeker-stat-icon">🔖</div>
-
+            <div className="seeker-stat-icon">👤</div>
             <div>
-              <span>SAVED JOBS</span>
-              <strong>05</strong>
-              <p>Jobs saved</p>
+              <span>PROFILE</span>
+              <strong>Start</strong>
+              <p>Complete your profile</p>
             </div>
           </div>
-
         </div>
-      </section>
-
-      {/* Upcoming Interview */}
-      <section className="seeker-interview-alert">
-
-        <div className="seeker-interview-icon">
-          🎥
-        </div>
-
-        <div className="seeker-interview-content">
-          <span>NEXT INTERVIEW</span>
-
-          <h2>
-            Technical Round 1 - Full Stack Developer
-          </h2>
-
-          <p>
-            <strong>Acme Corp</strong>
-            <span> • </span>
-            Today, Sep 16, 2026
-            <span> • </span>
-            03:00 PM IST
-          </p>
-
-          <small>
-            Interviewer: Nitesh (Hiring Lead)
-          </small>
-        </div>
-
-        <a
-          href="https://meet.google.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="seeker-meeting-button"
-        >
-          🔗 Join Google Meet
-        </a>
-
       </section>
 
       {/* Recommended Jobs */}
       <section className="seeker-recommended-section">
-
         <div className="seeker-section-heading-row">
-
           <div>
-            <span>RECOMMENDED FOR YOU</span>
-            <h2>Jobs matched to your skills</h2>
+            <span>EXPLORE OPPORTUNITIES</span>
+            <h2>Jobs you may be interested in</h2>
           </div>
 
-          <Link to="/jobs">
-            View All Jobs →
-          </Link>
-
+          <Link to="/jobs">View All Jobs →</Link>
         </div>
 
         <div className="seeker-recommended-grid">
+          {recommendedJobs.map((job) => (
+            <article className="seeker-job-card" key={job.id}>
+              <div className="seeker-job-card-top">
+                <div className="seeker-company-logo">
+                  {job.initials}
+                </div>
 
-          {/* Job Card 1 */}
-          <div className="seeker-job-card">
-
-            <div className="seeker-job-card-top">
-              <div className="seeker-company-icon">
-                TC
+                <button
+                  type="button"
+                  className="seeker-save-button"
+                  aria-label={`Save ${job.title}`}
+                >
+                  🔖
+                </button>
               </div>
 
-              <div>
-                <span>TechCorp Inc.</span>
-                <small>Full-time</small>
-              </div>
-            </div>
+              <span className="seeker-job-company">{job.company}</span>
 
-            <h3>
-              Senior React Developer
-            </h3>
+              <h3>{job.title}</h3>
 
-            <p className="seeker-job-location">
-              📍 Delhi / Gurgaon
-            </p>
-
-            <p className="seeker-job-salary">
-              ₹8,00,000 - ₹12,00,000
-            </p>
-
-            <div className="seeker-job-skills">
-              <span>React.js</span>
-              <span>Tailwind</span>
-              <span>JavaScript</span>
-            </div>
-
-            <div className="seeker-job-actions">
-              <Link to="/jobs/1">
-                Quick Apply
-              </Link>
-
-              <button type="button">
-                🔖 Save
-              </button>
-            </div>
-
-          </div>
-
-          {/* Job Card 2 */}
-          <div className="seeker-job-card">
-
-            <div className="seeker-job-card-top">
-              <div className="seeker-company-icon">
-                IX
+              <div className="seeker-job-meta">
+                <span>📍 {job.location}</span>
+                <span>◷ {job.type}</span>
+                <span>◉ {job.experience}</span>
               </div>
 
-              <div>
-                <span>InnovateX</span>
-                <small>Remote</small>
+              <div className="seeker-job-salary">
+                {job.salary}
               </div>
-            </div>
 
-            <h3>
-              Node.js Backend Engineer
-            </h3>
+              <div className="seeker-job-skills">
+                {job.skills.map((skill) => (
+                  <span key={skill}>{skill}</span>
+                ))}
+              </div>
 
-            <p className="seeker-job-location">
-              📍 Bangalore, IN
-            </p>
+              <div className="seeker-job-card-bottom">
+                <small>Posted {job.posted}</small>
 
-            <p className="seeker-job-salary">
-              ₹10,00,000 - ₹15,00,000
-            </p>
-
-            <div className="seeker-job-skills">
-              <span>Node.js</span>
-              <span>Express</span>
-              <span>MySQL</span>
-              <span>REST API</span>
-            </div>
-
-            <div className="seeker-job-actions">
-              <Link to="/jobs/2">
-                Quick Apply
-              </Link>
-
-              <button type="button">
-                🔖 Save
-              </button>
-            </div>
-
-          </div>
-
+                <Link to={`/jobs/${job.id}`}>
+                  View Details
+                </Link>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
-      {/* Empty State / Backend Placeholder */}
-      {applications.length === 0 && recommendedJobs.length === 0 && (
-        <section className="seeker-dashboard-note">
-          <span>BACKEND INTEGRATION</span>
+      {/* Profile Completion */}
+      <section className="seeker-profile-completion">
+        <div className="seeker-profile-completion-content">
+          <span>BUILD YOUR PROFILE</span>
 
-          <h2>
-            Live applications and recommendations will appear here.
-          </h2>
+          <h2>Complete your profile to unlock more opportunities.</h2>
 
           <p>
-            These dashboard values are currently frontend placeholders.
-            They will be connected to the HirePulse backend and MySQL
-            database after the seeker frontend is completed.
+            Add your resume, skills, education, and experience so recruiters
+            can better understand your professional background.
           </p>
-        </section>
-      )}
 
-      {/* Footer */}
+          <Link
+            to="/seeker-profile/edit"
+            className="seeker-primary-button"
+          >
+            Complete Profile
+          </Link>
+        </div>
+
+        <div className="seeker-profile-completion-steps">
+          <div>
+            <strong>01</strong>
+            <span>Resume</span>
+          </div>
+
+          <div>
+            <strong>02</strong>
+            <span>Skills</span>
+          </div>
+
+          <div>
+            <strong>03</strong>
+            <span>Education</span>
+          </div>
+
+          <div>
+            <strong>04</strong>
+            <span>Experience</span>
+          </div>
+        </div>
+      </section>
+
       <SeekerFooter />
-
     </div>
   );
 }

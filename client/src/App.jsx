@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
 import hirepulseLogo from "./assets/hirepulse-logo.png";
-import SeekerDashboard from "./pages/seeker/SeekerDashboard";
 import Employer from "./pages/Employer";
 import EmployerRegister from "./pages/EmployerRegister";
 import EmployerLogin from "./pages/EmployerLogin";
@@ -12,7 +11,13 @@ import EmployerInterviews from "./pages/EmployerInterviews";
 import EmployerProfile from "./pages/EmployerProfile";
 import EmployerProfileEdit from "./pages/EmployerProfileEdit";
 import About from "./pages/About";
+import SeekerDashboard from "./pages/seeker/SeekerDashboard";
 import FindJobs from "./pages/seeker/FindJobs";
+import JobDetailsPage from "./pages/seeker/JobDetails";
+import MyApplications from "./pages/seeker/MyApplications";
+import SeekerProfile from "./pages/seeker/SeekerProfile";
+import SeekerProfileEdit from "./pages/seeker/SeekerProfileEdit";
+import SavedJobs from "./pages/seeker/SavedJobs";
 import "./App.css";
 
 
@@ -451,12 +456,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/jobs" element={<FindJobs />} />
-        <Route path="/jobs/:id" element={<JobDetails />} />
+        <Route path="/" element={<Home />} />   
+       <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
         <Route path="/seeker-dashboard" element={<SeekerDashboard />} />
+        <Route path="/jobs" element={<FindJobs />} /> 
+         <Route path="/jobs/:id" element={<JobDetailsPage />} />
+        <Route path="/my-applications" element={<MyApplications />} />
+        <Route path="/seeker-profile" element={<SeekerProfile />} />
+        <Route path="/seeker-profile/edit" element={<SeekerProfileEdit />}/>
+        <Route path="/saved-jobs" element={<SavedJobs />} />
         <Route path="/employers" element={<Employer />} />
         <Route path="/employer-register" element={<EmployerRegister />} />
         <Route path="/employer-login" element={<EmployerLogin />} />

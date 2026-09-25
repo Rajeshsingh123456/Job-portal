@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "../../assets/hirepulse-logo.png";
 import "./SeekerNavbar.css";
@@ -10,8 +10,12 @@ function SeekerNavbar() {
     window.location.href = "/";
   };
 
+  const getNavClass = ({ isActive }) =>
+    isActive ? "seeker-nav-link active" : "seeker-nav-link";
+
   return (
     <header className="seeker-navbar">
+      {/* Brand */}
       <div className="seeker-navbar-brand">
         <Link to="/seeker-dashboard">
           <img src={logo} alt="HirePulse" />
@@ -20,25 +24,44 @@ function SeekerNavbar() {
         <span>Job Seeker</span>
       </div>
 
+      {/* Search */}
       <div className="seeker-navbar-search">
         <span>⌕</span>
+
         <input
           type="text"
           placeholder="Search jobs, skills, companies..."
         />
       </div>
 
+      {/* Main Navigation */}
       <nav className="seeker-navbar-links">
-        <Link to="/seeker-dashboard">Dashboard</Link>
-        <Link to="/jobs">Find Jobs</Link>
-        <Link to="/my-applications">Applications</Link>
+        <NavLink to="/seeker-dashboard" className={getNavClass}>
+          Dashboard
+        </NavLink>
+
+        <NavLink to="/jobs" className={getNavClass}>
+          Find Jobs
+        </NavLink>
+
+        <NavLink to="/my-applications" className={getNavClass}>
+          Applications
+        </NavLink>
       </nav>
 
+      {/* Right Side */}
       <div className="seeker-navbar-right">
-        <Link to="/saved-jobs" className="seeker-navbar-action">
-          🔖
+        <NavLink
+          to="/saved-jobs"
+          className={({ isActive }) =>
+            isActive
+              ? "seeker-navbar-action active"
+              : "seeker-navbar-action"
+          }
+        >
+          <span className="seeker-navbar-action-icon">🔖</span>
           <span>Saved</span>
-        </Link>
+        </NavLink>
 
         <button
           className="seeker-navbar-icon"
@@ -58,9 +81,12 @@ function SeekerNavbar() {
           <span>1</span>
         </button>
 
+        {/* Profile */}
         <div className="seeker-profile-wrapper">
           <button
-            className="seeker-profile-button"
+            className={`seeker-profile-button ${
+              profileOpen ? "open" : ""
+            }`}
             type="button"
             onClick={() => setProfileOpen(!profileOpen)}
           >
@@ -76,8 +102,23 @@ function SeekerNavbar() {
 
           {profileOpen && (
             <div className="seeker-profile-dropdown">
-              <Link to="/seeker-profile">My Profile</Link>
-              <Link to="/seeker-profile/edit">Edit Profile</Link>
+              <NavLink
+                to="/seeker-profile"
+                className={({ isActive }) =>
+                  isActive ? "active" : ""
+                }
+              >
+                My Profile
+              </NavLink>
+
+              <NavLink
+                to="/seeker-profile/edit"
+                className={({ isActive }) =>
+                  isActive ? "active" : ""
+                }
+              >
+                Edit Profile
+              </NavLink>
 
               <button type="button" onClick={handleLogout}>
                 Logout
@@ -91,3 +132,4 @@ function SeekerNavbar() {
 }
 
 export default SeekerNavbar;
+

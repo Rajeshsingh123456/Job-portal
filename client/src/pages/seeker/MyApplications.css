@@ -1,0 +1,506 @@
+
+.my-applications-page {
+  min-height: 100vh;
+  background: #f7f8fc;
+  color: #171a2b;
+}
+
+/* Hero */
+.my-applications-hero {
+  width: 100%;
+  padding: 62px 5% 68px;
+  box-sizing: border-box;
+  background: #171a2b;
+  color: #ffffff;
+}
+
+.my-applications-hero-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.my-applications-hero-content > span {
+  display: block;
+  margin-bottom: 13px;
+  color: #858b9e;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.my-applications-hero-content h1 {
+  max-width: 760px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 42px;
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.my-applications-hero-content p {
+  max-width: 650px;
+  margin: 18px 0 0;
+  color: #b9becb;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Summary */
+.my-applications-summary {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 38px 5% 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.application-summary-card {
+  min-height: 125px;
+  padding: 22px;
+  box-sizing: border-box;
+  border: 1px solid #e2e4eb;
+  border-radius: 9px;
+  background: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.application-summary-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: #f0f1f5;
+  color: #6c7180;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.application-summary-card > div:last-child {
+  min-width: 0;
+}
+
+.application-summary-card span {
+  display: block;
+  color: #686d7c;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.application-summary-card strong {
+  display: block;
+  margin-top: 7px;
+  color: #171a2b;
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.application-summary-card small {
+  display: block;
+  margin-top: 7px;
+  color: #9a9eaa;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+/* Main */
+.my-applications-main {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 58px 5% 80px;
+  box-sizing: border-box;
+}
+
+.my-applications-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.my-applications-header > div {
+  max-width: 700px;
+}
+
+.my-applications-header span,
+.my-applications-guide-heading > span {
+  display: block;
+  margin-bottom: 9px;
+  color: #858b9e;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.my-applications-header h2,
+.my-applications-guide-heading h2 {
+  margin: 0;
+  color: #171a2b;
+  font-size: 27px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.my-applications-header p,
+.my-applications-guide-heading p {
+  margin: 9px 0 0;
+  color: #6f7485;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Empty State */
+.my-applications-empty {
+  width: 100%;
+  min-height: 390px;
+  padding: 55px 30px;
+  box-sizing: border-box;
+  border: 1px solid #e1e3ea;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.my-applications-empty-icon {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 21px;
+  border: 1px solid #e1e3ea;
+  border-radius: 50%;
+  background: #f5f6f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-applications-empty-icon span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #171a2b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.my-applications-empty-label {
+  margin-bottom: 10px;
+  color: #858b9e;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.my-applications-empty h3 {
+  max-width: 550px;
+  margin: 0;
+  color: #171a2b;
+  font-size: 25px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.my-applications-empty p {
+  max-width: 570px;
+  margin: 13px 0 0;
+  color: #737887;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.my-applications-empty-actions {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.my-applications-primary-button,
+.my-applications-secondary-button {
+  min-height: 43px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.my-applications-primary-button {
+  background: #171a2b;
+  color: #ffffff;
+}
+
+.my-applications-primary-button:hover {
+  background: #252941;
+  transform: translateY(-1px);
+}
+
+.my-applications-secondary-button {
+  border: 1px solid #dfe2e8;
+  background: #ffffff;
+  color: #555a69;
+}
+
+.my-applications-secondary-button:hover {
+  background: #f5f6f9;
+  color: #171a2b;
+}
+
+/* Guide */
+.my-applications-guide {
+  margin-top: 55px;
+  padding-top: 50px;
+  border-top: 1px solid #e3e5eb;
+}
+
+.my-applications-guide-heading {
+  max-width: 650px;
+}
+
+.my-applications-steps {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.my-application-step {
+  min-height: 155px;
+  padding: 24px;
+  box-sizing: border-box;
+  border: 1px solid #e1e3ea;
+  border-radius: 9px;
+  background: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.my-application-step-number {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #171a2b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.my-application-step h3 {
+  margin: 0;
+  color: #25283a;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.my-application-step p {
+  margin: 8px 0 0;
+  color: #737887;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* Bottom CTA */
+.my-applications-cta {
+  width: 100%;
+  padding: 58px 5%;
+  box-sizing: border-box;
+  background: #171a2b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.my-applications-cta > div {
+  max-width: 700px;
+}
+
+.my-applications-cta span {
+  display: block;
+  margin-bottom: 10px;
+  color: #858b9e;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.my-applications-cta h2 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.35;
+}
+
+.my-applications-cta p {
+  margin: 0;
+  color: #aeb3c3;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.my-applications-cta > a {
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #171a2b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.my-applications-cta > a:hover {
+  background: #eeeeF3;
+  transform: translateY(-1px);
+}
+
+/* Large Screens */
+@media (min-width: 1400px) {
+  .my-applications-hero,
+  .my-applications-cta {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .my-applications-summary,
+  .my-applications-main {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .my-applications-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .my-applications-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .my-applications-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 700px) {
+  .my-applications-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .my-applications-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .my-applications-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .my-applications-cta > a {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+  .my-applications-hero {
+    padding: 45px 5% 50px;
+  }
+
+  .my-applications-hero-content h1 {
+    font-size: 30px;
+  }
+
+  .my-applications-hero-content p {
+    font-size: 12px;
+  }
+
+  .my-applications-summary {
+    grid-template-columns: 1fr;
+    padding-top: 25px;
+  }
+
+  .application-summary-card {
+    min-height: 105px;
+  }
+
+  .my-applications-main {
+    padding-top: 45px;
+    padding-bottom: 60px;
+  }
+
+  .my-applications-empty {
+    min-height: 430px;
+    padding: 45px 22px;
+  }
+
+  .my-applications-empty h3 {
+    font-size: 22px;
+  }
+
+  .my-applications-empty-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .my-applications-primary-button,
+  .my-applications-secondary-button {
+    width: 100%;
+  }
+
+  .my-applications-guide {
+    margin-top: 45px;
+    padding-top: 40px;
+  }
+
+  .my-application-step {
+    min-height: auto;
+  }
+
+  .my-applications-cta {
+    padding: 45px 5%;
+  }
+
+  .my-applications-cta h2 {
+    font-size: 24px;
+  }
+}

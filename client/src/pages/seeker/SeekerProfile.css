@@ -1,0 +1,484 @@
+
+.seeker-profile-page {
+  min-height: 100vh;
+  background: #f6f7fb;
+  color: #171a2b;
+}
+
+/* Hero */
+
+.seeker-profile-hero {
+  width: 100%;
+  padding: 65px 5%;
+  box-sizing: border-box;
+  background: #171a2b;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 60px;
+  align-items: center;
+}
+
+.seeker-profile-hero-content {
+  max-width: 760px;
+}
+
+.seeker-profile-label,
+.seeker-profile-section-heading > span,
+.seeker-profile-card-heading span,
+.seeker-profile-completion span {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.seeker-profile-label {
+  margin-bottom: 16px;
+  color: #aeb4c7;
+}
+
+.seeker-profile-hero h1 {
+  margin: 0;
+  max-width: 700px;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.seeker-profile-hero p {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: #c8ccda;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.seeker-profile-hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.seeker-profile-primary-btn,
+.seeker-profile-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.seeker-profile-primary-btn {
+  background: #ffffff;
+  color: #171a2b;
+}
+
+.seeker-profile-primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.seeker-profile-secondary-btn {
+  border: 1px solid #4a5065;
+  color: #ffffff;
+}
+
+.seeker-profile-secondary-btn:hover {
+  background: #252a3d;
+}
+
+.seeker-profile-hero-card {
+  padding: 30px;
+  border: 1px solid #34394d;
+  border-radius: 14px;
+  background: #202538;
+  text-align: center;
+}
+
+.seeker-profile-avatar-large {
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #34394d;
+  color: #aeb4c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.seeker-profile-hero-card h3 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.seeker-profile-hero-card p {
+  margin: 8px 0 25px;
+  color: #aeb4c7;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.seeker-profile-progress {
+  text-align: left;
+}
+
+.seeker-profile-progress-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 9px;
+  color: #c8ccda;
+  font-size: 12px;
+}
+
+.seeker-profile-progress-top strong {
+  color: #ffffff;
+}
+
+.seeker-profile-progress-bar {
+  height: 7px;
+  border-radius: 10px;
+  background: #34394d;
+  overflow: hidden;
+}
+
+.seeker-profile-progress-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #ffffff;
+}
+
+/* Main */
+
+.seeker-profile-main {
+  width: 100%;
+  padding: 65px 5% 80px;
+  box-sizing: border-box;
+}
+
+.seeker-profile-section-heading {
+  margin-bottom: 30px;
+}
+
+.seeker-profile-section-heading > span {
+  color: #73798d;
+  margin-bottom: 10px;
+}
+
+.seeker-profile-section-heading h2 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: -0.8px;
+}
+
+.seeker-profile-section-heading p {
+  max-width: 650px;
+  margin: 10px 0 0;
+  color: #73798d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Cards */
+
+.seeker-profile-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 24px;
+}
+
+.seeker-profile-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.seeker-profile-card {
+  min-width: 0;
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid #e4e6ed;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(23, 26, 43, 0.04);
+}
+
+.seeker-profile-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eceef3;
+}
+
+.seeker-profile-card-heading span {
+  color: #8a8fa1;
+  margin-bottom: 7px;
+}
+
+.seeker-profile-card-heading h3 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -0.3px;
+}
+
+.seeker-profile-card-heading a {
+  color: #171a2b;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.seeker-profile-card-heading a:hover {
+  text-decoration: underline;
+}
+
+/* Empty states */
+
+.seeker-profile-empty-content {
+  padding: 40px 20px 25px;
+  text-align: center;
+}
+
+.seeker-profile-empty-small {
+  padding: 30px 8px 5px;
+}
+
+.seeker-profile-empty-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  border-radius: 12px;
+  background: #f0f1f5;
+  color: #73798d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.seeker-profile-empty-small .seeker-profile-empty-icon {
+  margin-left: 0;
+}
+
+.seeker-profile-empty-content h4,
+.seeker-profile-empty-small h4 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.seeker-profile-empty-content p,
+.seeker-profile-empty-small p {
+  max-width: 600px;
+  margin: 9px 0 16px;
+  color: #73798d;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.seeker-profile-empty-content a,
+.seeker-profile-empty-small a {
+  color: #171a2b;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.seeker-profile-empty-content a:hover,
+.seeker-profile-empty-small a:hover {
+  text-decoration: underline;
+}
+
+/* Contact */
+
+.seeker-profile-contact-list {
+  padding-top: 20px;
+}
+
+.seeker-profile-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eceef3;
+}
+
+.seeker-profile-contact-item:last-child {
+  border-bottom: none;
+}
+
+.seeker-profile-contact-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #f0f1f5;
+  color: #505669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.seeker-profile-contact-item span {
+  display: block;
+  margin-bottom: 4px;
+  color: #8a8fa1;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.seeker-profile-contact-item strong {
+  color: #505669;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Completion */
+
+.seeker-profile-completion {
+  margin-top: 35px;
+  padding: 35px 40px;
+  border-radius: 14px;
+  background: #171a2b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.seeker-profile-completion span {
+  color: #aeb4c7;
+  margin-bottom: 10px;
+}
+
+.seeker-profile-completion h2 {
+  margin: 0;
+  font-size: 27px;
+  letter-spacing: -0.5px;
+}
+
+.seeker-profile-completion p {
+  max-width: 680px;
+  margin: 10px 0 0;
+  color: #c8ccda;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.seeker-profile-completion a {
+  flex-shrink: 0;
+  padding: 13px 20px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #171a2b;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.seeker-profile-completion a:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .seeker-profile-hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .seeker-profile-hero-card {
+    max-width: 500px;
+  }
+
+  .seeker-profile-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .seeker-profile-hero {
+    padding: 45px 6%;
+  }
+
+  .seeker-profile-hero h1 {
+    font-size: 40px;
+    letter-spacing: -1.2px;
+  }
+
+  .seeker-profile-hero-actions {
+    flex-direction: column;
+  }
+
+  .seeker-profile-primary-btn,
+  .seeker-profile-secondary-btn {
+    width: 100%;
+  }
+
+  .seeker-profile-main {
+    padding: 45px 6% 60px;
+  }
+
+  .seeker-profile-section-heading h2 {
+    font-size: 28px;
+  }
+
+  .seeker-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seeker-profile-completion {
+    padding: 30px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .seeker-profile-completion a {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 500px) {
+  .seeker-profile-card {
+    padding: 22px;
+  }
+
+  .seeker-profile-hero-card {
+    padding: 24px;
+  }
+
+  .seeker-profile-hero h1 {
+    font-size: 34px;
+  }
+
+  .seeker-profile-section-heading h2 {
+    font-size: 25px;
+  }
+
+  .seeker-profile-card-heading h3 {
+    font-size: 18px;
+  }
+}
